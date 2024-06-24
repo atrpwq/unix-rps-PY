@@ -19,15 +19,15 @@ while True:
     if score <= 0:score = 0
     print(f'score: {score}')
     choice = input('rock, paper, scissors [r/p/s] >> ')
-    if choice == 'r':
+    if choice in rocklst:
         if ranchoice == 'r':tie()
         elif ranchoice == 'p':loss()
         else:win()
-    elif choice == 'p':
+    elif choice in paperlst:
         if ranchoice == 'r':win()
         elif ranchoice =='p':tie()
         else:loss()
-    elif choice == 's':
+    elif choice in scissorslst:
         if ranchoice == 'r':loss()
         elif ranchoice == 'p':win()
         else:tie()
